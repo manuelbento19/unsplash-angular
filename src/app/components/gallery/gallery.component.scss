@@ -1,0 +1,30 @@
+section {
+    width: 100%;
+
+    div {
+        margin: 0 auto;
+        width: min(1200px, 100%);
+        height: 100%x;
+        padding: 10px 6px;
+        ul {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+            gap:10px;
+
+            li {
+                border-radius: .2rem;
+                overflow: hidden;
+                img {
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                    cursor: pointer;
+                    filter: grayscale(80%);
+                    transition: .35s linear;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
