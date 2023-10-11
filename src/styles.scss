@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smooth: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}

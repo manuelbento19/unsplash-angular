@@ -1,0 +1,12 @@
+<section class="hero">
+    <main>
+        <div>
+            <h1>Unsplash Angular Fetcher</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde aliquam distinctio sit nesciunt possimus iure libero vo fugit excepturi provident ullam, voluptates consequuntur quos?</p>
+        </div>
+        <form #form="ngForm" (ngSubmit)="getData(form)" novalidate class="input">
+            <input type="text" name="searchValue" ngModel placeholder="Pesquisar">
+            <button><fa-icon [icon]="icon" [size]="'lg'"/></button>
+        </form>
+    </main>
+</section>

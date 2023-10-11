@@ -1,0 +1,75 @@
+.hero{
+    width: 100%;
+    height: 65vh;
+    background: url('../../../assets/hero2.jpg') no-repeat center center / cover;
+    position: relative;
+
+    main{
+        margin: 0 auto;
+        width: min(1200px,100%);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+        padding: 8px;
+        div{
+            position: relative;
+            margin: 15% auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            h1{
+                color: #fff;
+                font-size: 2rem;
+            }
+            p{
+                font-size: .85rem;
+                color: #eee;
+                font-weight: 100;
+                width: min(490px,100%);
+                margin-top: 1rem;
+            }
+        }
+        form{
+            margin-top: 5%;
+            width: min(360px,100%);
+            padding: 7px;
+            background: #fff;
+            border-radius: 1.5rem;
+            display: flex;
+            font-size: .9rem;
+           
+            input{
+                width: 100%;
+                height: 100%;
+                padding: 4px 2px;
+                border: none;
+                outline: none;
+                color: #777;
+            }
+            &:has(input:focus){
+                border: 1px solid rgb(250, 150, 0);
+            }
+            button{
+                border: none;
+                background: none;
+                background: rgb(250, 150, 0);
+                color: #fff;
+                padding: 8px;
+                border-radius: 100%;
+            }
+        }
+
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+}
