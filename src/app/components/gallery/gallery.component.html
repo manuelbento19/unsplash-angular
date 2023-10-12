@@ -1,12 +1,13 @@
 <section>
-    <div>
+    <main>
         <ul *ngIf="gallery && gallery.length>0; else notFound">
             <li *ngFor="let item of gallery">
                 <img [src]="item.urls.full" [alt]="item.alt_description | titlecase ">
             </li>
         </ul>
+        <div *ngIf="loading==true"  class="spinner"></div>
         <ng-template #notFound>
-            <span>Sem resultados</span>
+            <span *ngIf="!loading">Sem resultados</span>
         </ng-template>
-    </div>
+    </main>
 </section>

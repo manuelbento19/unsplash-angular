@@ -7,5 +7,6 @@ import { Gallery } from 'src/app/interfaces/Gallery';
 })
 export class GalleryComponent {
   @Input() gallery:Gallery[] =  []
+  @Input() loading = false;
 
 }
