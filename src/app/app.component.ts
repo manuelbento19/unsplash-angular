@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Gallery } from './interfaces/Gallery';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,22 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'unsplash-angular';
-  images = [
-    '../assets/hero.jpg',
-    '../assets/hero2.jpg',
-    '../assets/hero3.jpg',
-    '../assets/hero.jpg',
-    '../assets/hero.jpg',
-    '../assets/hero2.jpg',
-    '../assets/hero3.jpg',
-    '../assets/hero.jpg',
-    '../assets/hero.jpg',
-    '../assets/hero2.jpg',
-    '../assets/hero3.jpg',
-    '../assets/hero.jpg',
-    '../assets/hero.jpg',
-    '../assets/hero2.jpg',
-    '../assets/hero3.jpg',
-    '../assets/hero.jpg',
-  ]
+  images: Gallery[] = []
+  
+  constructor(private apiService: ApiService){}
+
+ takeData(search:string){
+  this.apiService.fetchData(search).subscribe((data)=>this.images = data.results)
+ }
 }

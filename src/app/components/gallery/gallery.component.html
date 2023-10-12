@@ -1,12 +1,12 @@
 <section>
-    <div *ngIf="gallery; else notFound">
-        <ul>
+    <div>
+        <ul *ngIf="gallery && gallery.length>0; else notFound">
             <li *ngFor="let item of gallery">
-                <img [src]="item" [alt]="item">
+                <img [src]="item.urls.full" [alt]="item.alt_description | titlecase ">
             </li>
         </ul>
+        <ng-template #notFound>
+            <span>Sem resultados</span>
+        </ng-template>
     </div>
-    <ng-template #notFound>
-        Sem resultados
-    </ng-template>
 </section>
